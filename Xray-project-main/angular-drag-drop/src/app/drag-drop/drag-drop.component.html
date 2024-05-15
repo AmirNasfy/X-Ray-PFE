@@ -1,0 +1,15 @@
+<div class="container">
+  <button class="source-guide-btn" (click)="openSourceGuide()">Source and Guide</button>
+  <h1>Dental Xray AI Detector</h1>
+  <p class="intro-paragraph">
+    Elevate dental diagnostics with AI precision. Instantly detect and assess dental health from X-rays with our intelligent analysis.
+    Quick, accurate, and reliable—welcome to smarter dental care.
+  </p>
+  <div class="upload-box">
+    <input type="file" id="file" (change)="onFileSelected($event)" hidden/>
+    <label for="file" class="upload-btn">Choose a file</label>
+    <button (click)="upload()" class="analyze-btn">Analyze X-Ray</button>
+    <div class="loading-circle" *ngIf="isLoading"></div>
+    <mat-spinner *ngIf="isLoading" style="display: block; margin: auto;"></mat-spinner>
+  </div>
+</div>
